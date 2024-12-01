@@ -95,13 +95,14 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(334, 69);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 13);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Отредактировано";
+            this.label4.Text = "Обновлен";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dateTimePickerModified
             // 
-            this.dateTimePickerModified.Location = new System.Drawing.Point(437, 63);
+            this.dateTimePickerModified.Location = new System.Drawing.Point(397, 63);
             this.dateTimePickerModified.Name = "dateTimePickerModified";
             this.dateTimePickerModified.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerModified.TabIndex = 7;
@@ -120,7 +121,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 9;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonOk

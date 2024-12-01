@@ -67,5 +67,10 @@ namespace NoteAppUI
                 textBoxTitle.Text = "Слишком длинное название!!!";
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
