@@ -67,9 +67,9 @@
             this.label_Autor.Location = new System.Drawing.Point(10, 106);
             this.label_Autor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Autor.Name = "label_Autor";
-            this.label_Autor.Size = new System.Drawing.Size(312, 20);
+            this.label_Autor.Size = new System.Drawing.Size(281, 20);
             this.label_Autor.TabIndex = 3;
-            this.label_Autor.Text = "Автор: Устинов Владислав Алексеевич";
+            this.label_Autor.Text = "Автор: Тарасов Валерий Сергеевич";
             this.label_Autor.Click += new System.EventHandler(this.label_Autor_Click);
             // 
             // label_mail
@@ -86,13 +86,13 @@
             // linkLabel_Mail
             // 
             this.linkLabel_Mail.AutoSize = true;
-            this.linkLabel_Mail.Location = new System.Drawing.Point(237, 145);
+            this.linkLabel_Mail.Location = new System.Drawing.Point(243, 144);
             this.linkLabel_Mail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel_Mail.Name = "linkLabel_Mail";
-            this.linkLabel_Mail.Size = new System.Drawing.Size(125, 13);
+            this.linkLabel_Mail.Size = new System.Drawing.Size(123, 13);
             this.linkLabel_Mail.TabIndex = 7;
             this.linkLabel_Mail.TabStop = true;
-            this.linkLabel_Mail.Text = "vladislav140203@mail.ru";
+            this.linkLabel_Mail.Text = "valeriitarasof@yandex.ru";
             this.linkLabel_Mail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Mail_LinkClicked);
             // 
             // label_GitHub
@@ -112,10 +112,10 @@
             this.linkLabel_GitHub.Location = new System.Drawing.Point(99, 179);
             this.linkLabel_GitHub.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel_GitHub.Name = "linkLabel_GitHub";
-            this.linkLabel_GitHub.Size = new System.Drawing.Size(222, 13);
+            this.linkLabel_GitHub.Size = new System.Drawing.Size(195, 13);
             this.linkLabel_GitHub.TabIndex = 9;
             this.linkLabel_GitHub.TabStop = true;
-            this.linkLabel_GitHub.Text = "https://github.com/Vlad-Ust-123/NoteApp.git";
+            this.linkLabel_GitHub.Text = "https://github.com/LPAlert/NoteApp.git";
             // 
             // label_copiriait
             // 
@@ -124,9 +124,9 @@
             this.label_copiriait.Location = new System.Drawing.Point(11, 283);
             this.label_copiriait.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_copiriait.Name = "label_copiriait";
-            this.label_copiriait.Size = new System.Drawing.Size(191, 17);
+            this.label_copiriait.Size = new System.Drawing.Size(178, 17);
             this.label_copiriait.TabIndex = 10;
-            this.label_copiriait.Text = "2024 Устинов Владислав ® ";
+            this.label_copiriait.Text = "2024 Тарасов Валерий ® ";
             // 
             // Form2
             // 
@@ -141,7 +141,7 @@
             this.Controls.Add(this.label_Autor);
             this.Controls.Add(this.label_Version);
             this.Controls.Add(this.label_Title);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "О программе";
             this.ResumeLayout(false);

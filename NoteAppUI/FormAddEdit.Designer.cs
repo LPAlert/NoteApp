@@ -44,35 +44,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(19, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Title:";
+            this.label1.Text = "Название";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 39);
+            this.label2.Location = new System.Drawing.Point(19, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Category:";
+            this.label2.Text = "Категория";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 69);
+            this.label3.Location = new System.Drawing.Point(19, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Created:";
+            this.label3.Text = "Создано";
             // 
             // textBoxTitle
             // 
             this.textBoxTitle.Location = new System.Drawing.Point(80, 10);
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(687, 20);
+            this.textBoxTitle.Size = new System.Drawing.Size(663, 20);
             this.textBoxTitle.TabIndex = 3;
             // 
             // comboBoxCategory
@@ -95,13 +95,13 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(334, 69);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.Size = new System.Drawing.Size(97, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Modified:";
+            this.label4.Text = "Отредактировано";
             // 
             // dateTimePickerModified
             // 
-            this.dateTimePickerModified.Location = new System.Drawing.Point(390, 63);
+            this.dateTimePickerModified.Location = new System.Drawing.Point(437, 63);
             this.dateTimePickerModified.Name = "dateTimePickerModified";
             this.dateTimePickerModified.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerModified.TabIndex = 7;
