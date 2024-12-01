@@ -10,7 +10,7 @@ namespace NoteApp
     /// </summary>
     public static class ProjectManager
     {
-        //private const string path_ = "C:\\Users\\Dani\\Documents\\docs\\NoteApp.notes";
+        //private const string path_ = "C:\Users\valer\Documents";
         private const string path_ = "NoteApp.notes";
 
 
