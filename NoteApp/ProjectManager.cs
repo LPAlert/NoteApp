@@ -11,7 +11,7 @@ namespace NoteApp
     public static class ProjectManager
     {
         //private const string path_ = "C:\Users\valer\Documents";
-        private const string path_ = "NoteApp.notes";
+        private const string path_ = "NoteApp.txt";
 
 
         /// <summary>
