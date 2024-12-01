@@ -12,13 +12,12 @@ namespace NoteApp
     /// <summary>
     public enum NoteCategory
     {
-        Работа,
-        Дом,
-        Здоровье,
-        Спорт,
-        Люди,
-        Документы,
-        Финансы,
-        Разное
+        Other = 1,
+        Documents,
+        Finance,
+        HealthAndSport,
+        Home,
+        People,
+        Work
     }
 }

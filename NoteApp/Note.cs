@@ -1,108 +1,84 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DateTime = System.DateTime;
+using Newtonsoft.Json;
 namespace NoteApp
 {
     /// <summary>
-    /// Класс Запись. Здесь хранится информация о название заметки,ее категории
-    /// содержании,даты создания и дате изменения
+    /// Класс заметки.
     /// </summary>
-    public class Note : ICloneable
+    public class Note
     {
+        /// <summary>
+        /// Название
+        /// </summary>
+        private string _name;
+
         /// <summary>
         /// Название заметки
         /// </summary>
-        private string _title;
-
-        /// <summary>
-        /// Свойство имени заметки.
-        /// Проверка на длину длину символом: менее 50 символов.
-        /// Устанавливает первую букву в верхний регистр.
-        /// </summary>
-        public string Title
+        public string Name
         {
-            get => _title;
+            get
+            {
+                return _name;
+            }
             set
             {
-                if (value.Length >= 50)
+                //  Исключение не введенного названия
+                if (value.Length == 0 || value == null)
                 {
-                    throw new ArgumentException("Имя заметки должно быть не более 50 символов!");
+                    throw new ArgumentException("Name not writed");
                 }
-                else
+
+                //  Исключение если название больше 50 символов
+                if (value.Length > 50)
                 {
-                    if (value != "")
-                    {
-                        _title = value;
-                    }
-                    else _title = "Безымянный";
+                    throw new ArgumentException("Name bigger 50 symbols");
                 }
+                _name = value;
             }
         }
         /// <summary>
-        /// Свойство категории заметки. Заменяет время исправления при смене категории
+        /// Содержание 
         /// </summary>
-        public NoteCategory NoteCategory { get; set; }
+        public string Text { get; set; }
 
         /// <summary>
-        /// Свойство имени заметки. Изменяет время после изменения имени.
+        /// Категории
         /// </summary>
-        public string TextNote { get; set; }
+        public NoteCategory Category { get; set; }
 
         /// <summary>
-        /// Свойство для времени создания
+        /// Дата создания
         /// </summary>
-        public DateTime TimeCreate { get; set; } = DateTime.Now;
+        public DateTime CreatedTime { get; set; }
+        /// <summary>
+        /// Время последнего изменения
+        /// </summary>
+        public DateTime ModifiedTime { get; set; }
 
         /// <summary>
-        /// Свойство для изменения времени
+        /// Конструктор значений заметки.
         /// </summary>
-        public DateTime TimeLastChange { get; set; } = DateTime.Now;
+        public Note(string name, string text, NoteCategory category)
+        {
+            Name = name;
+            Text = text;
+            Category = category;
+            CreatedTime = DateTime.Now;
+            ModifiedTime = DateTime.Now;
+        }
+        public Note()
+        {
 
-        /// <summary>
-        /// Метод клонирования
-        /// </summary>
-        /// <returns>Возвращает копию класса Note</returns>
+        }
         public object Clone()
         {
-            return new Note
-            {
-                Title = Title,
-                TextNote = TextNote,
-                TimeLastChange = TimeLastChange,
-                TimeCreate = TimeCreate,
-                NoteCategory = NoteCategory
-            };
+            return this.MemberwiseClone();
         }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is Note note)
-            {
-                if (note.Title != this.Title)
-                {
-                    return false;
-                }
-                if (note.TextNote != this.TextNote)
-                {
-                    return false;
-                }
-                if (note.TimeCreate != this.TimeCreate)
-                {
-                    return false;
-                }
-                if (note.TimeLastChange != this.TimeLastChange)
-                {
-                    return false;
-                }
-                if (note.NoteCategory != this.NoteCategory)
-                {
-                    return false;
-                }
-                return true;
-            }
-
-            return false;
-        }
-
     }
 }
