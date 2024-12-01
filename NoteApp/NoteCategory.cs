@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace NoteApp
 {
     /// <summary>
-    /// Категории заметок.
-    /// <summary>
+    /// Перечисление категорий заметок
+    /// </summary>
     public enum NoteCategory
     {
-        Other = 1,
-        Documents,
-        Finance,
-        HealthAndSport,
+        Job,
         Home,
+        HealthAndSprot,
         People,
-        Work
+        Docs,
+        Finance,
+        Other
     }
 }

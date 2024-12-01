@@ -62,12 +62,12 @@ namespace NoteAppUI
         /// </summary>
         private void NewNote()
         {
-            string text = TitleTextBox.Text;
-            Note.Name = text;
-            Note.Text = NoteTextTextBox.Text;
-            Note.CreatedTime = CreatedDateTimePicker.Value;
-            Note.ModifiedTime = ModifiedDateTimePicker.Value;
-            Note.Category = (NoteCategory)CategoryComboBox.SelectedItem;
+                string text = TitleTextBox.Text;
+                Note.Name = text;
+                Note.Text = NoteTextTextBox.Text;
+                Note.CreatedTime = CreatedDateTimePicker.Value;
+                Note.ModifiedTime = ModifiedDateTimePicker.Value;
+                Note.Category = (NoteCategory)CategoryComboBox.SelectedItem;
         }
 
         /// <summary>

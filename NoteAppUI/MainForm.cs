@@ -140,7 +140,7 @@ namespace NoteAppUI
         private void RemoveNote()
         {
             var selectedIndex = NoteListBox.SelectedIndex;
-            if (selectedIndex == -1)
+            if(selectedIndex == -1)
             {
                 MessageBox.Show(@"Note not selected!", @"Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -148,7 +148,7 @@ namespace NoteAppUI
             else
             {
                 var selectedNote = _viewedNotes[selectedIndex];
-                DialogResult dialogResult = MessageBox.Show("Do you really want to remove this note: "
+                DialogResult dialogResult = MessageBox.Show("Do you really want to remove this note: " 
                 + _project.Notes[NoteListBox.SelectedIndex].Name + "?",
                 "Are you sure", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.OK)
@@ -208,7 +208,7 @@ namespace NoteAppUI
             }
             var selectedNote = _viewedNotes[selectedIndex];
             _project.CurrentIndexNote = selectedIndex;
-            TitleLabel.Text = selectedNote.Name;
+            TitleLabel.Text = selectedNote.Name; 
             Categorylabel.Text = selectedNote.Category.ToString();
             CreatedDateTimePicker.Value = selectedNote.CreatedTime;
             ModifiefDateTimePicker.Value = selectedNote.ModifiedTime;
@@ -242,7 +242,7 @@ namespace NoteAppUI
         {
             UpdateNotes();
         }
-
+       
         /// <summary>
         /// Добавление новой заметки через меню.
         /// </summary>
@@ -250,7 +250,7 @@ namespace NoteAppUI
         {
             AddNote();
         }
-
+        
         /// <summary>
         /// Редактирование заметки через меню.
         /// </summary>
@@ -258,7 +258,7 @@ namespace NoteAppUI
         {
             EditNote();
         }
-
+        
         /// <summary>
         /// Удаление заметки через меню.
         /// </summary>
@@ -266,7 +266,7 @@ namespace NoteAppUI
         {
             RemoveNote();
         }
-
+       
         /// <summary>
         /// Вызов окна About.
         /// </summary>
@@ -275,7 +275,7 @@ namespace NoteAppUI
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
         }
-
+       
         /// <summary>
         /// Закрытие главного окна через меню.
         /// </summary>

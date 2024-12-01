@@ -3,82 +3,112 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DateTime = System.DateTime;
-using Newtonsoft.Json;
+using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
+
 namespace NoteApp
 {
     /// <summary>
-    /// Класс заметки.
+    /// Класс Заметка для хранения разной информации
     /// </summary>
     public class Note
     {
-        /// <summary>
-        /// Название
-        /// </summary>
-        private string _name;
+        private string name_;
+        private NoteCategory category_;
+        private string text_;
 
         /// <summary>
-        /// Название заметки
+        /// Время создания заметки, заполняется автоматически
         /// </summary>
+        private string timeOfCreation_;
+
+        /// <summary>
+        /// Время изменения заметки, заполняется автоматически
+        /// </summary>
+        private string timeOfModification_;
+
+        public Note( string name, NoteCategory category, string text )
+        {
+            Name = name;
+            Category = category;
+            Text = text;
+            TimeOfCreation = DateTime.Now.ToString();
+            TimeOfModification = DateTime.Now.ToString();
+        }
+
         public string Name
         {
             get
             {
-                return _name;
+                return name_;
             }
             set
             {
-                //  Исключение не введенного названия
-                if (value.Length == 0 || value == null)
-                {
-                    throw new ArgumentException("Name not writed");
-                }
-
-                //  Исключение если название больше 50 символов
                 if (value.Length > 50)
                 {
-                    throw new ArgumentException("Name bigger 50 symbols");
+                    throw new ArgumentException();
                 }
-                _name = value;
+                if (value.Length == 0)
+                {
+                    name_ = "Без названия";
+                }
+                else
+                {
+                    name_ = value;
+                }
+                
+                timeOfModification_ = DateTime.Now.ToString();
             }
         }
-        /// <summary>
-        /// Содержание 
-        /// </summary>
-        public string Text { get; set; }
 
-        /// <summary>
-        /// Категории
-        /// </summary>
-        public NoteCategory Category { get; set; }
-
-        /// <summary>
-        /// Дата создания
-        /// </summary>
-        public DateTime CreatedTime { get; set; }
-        /// <summary>
-        /// Время последнего изменения
-        /// </summary>
-        public DateTime ModifiedTime { get; set; }
-
-        /// <summary>
-        /// Конструктор значений заметки.
-        /// </summary>
-        public Note(string name, string text, NoteCategory category)
+        public NoteCategory Category
         {
-            Name = name;
-            Text = text;
-            Category = category;
-            CreatedTime = DateTime.Now;
-            ModifiedTime = DateTime.Now;
+            get
+            {
+                return category_;
+            }
+            set
+            {
+                category_ = value;
+                timeOfModification_ = DateTime.Now.ToString();
+            }
         }
-        public Note()
-        {
 
-        }
-        public object Clone()
+        public string Text
         {
-            return this.MemberwiseClone();
+            get
+            {
+                return text_;
+            }
+            set
+            {
+                text_ = value;
+                timeOfModification_ = DateTime.Now.ToString();
+            }
+        }
+
+        public string TimeOfCreation
+        {
+            get
+            {
+                return timeOfCreation_;
+            }
+            set
+            {
+                timeOfCreation_ = value;
+            }
+        }
+
+        public string TimeOfModification
+        {
+            get
+            {
+                return timeOfModification_;
+            }
+            set
+            {
+                timeOfModification_ = value;
+            }
         }
     }
 }
