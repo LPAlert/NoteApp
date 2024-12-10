@@ -112,10 +112,10 @@
             this.GithubLinkLabel.AutoSize = true;
             this.GithubLinkLabel.Location = new System.Drawing.Point(61, 146);
             this.GithubLinkLabel.Name = "GithubLinkLabel";
-            this.GithubLinkLabel.Size = new System.Drawing.Size(159, 13);
+            this.GithubLinkLabel.Size = new System.Drawing.Size(181, 13);
             this.GithubLinkLabel.TabIndex = 7;
             this.GithubLinkLabel.TabStop = true;
-            this.GithubLinkLabel.Text = "github.com/intels1155/NoteApp";
+            this.GithubLinkLabel.Text = "https://github.com/LPAlert/NoteApp";
             this.GithubLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GithubLinkLabel_LinkClicked);
             // 
             // AuthorNameLabel
