@@ -19,13 +19,13 @@ namespace NoteAppUI
 
 		private void EmailLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("mailto:intels1155@gmail.com");
+			System.Diagnostics.Process.Start("mailto:valeriitarasof@yandex.ru");
 		}
 
 
 		private void GithubLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://github.com/ine");
+			System.Diagnostics.Process.Start("https://github.com");
 		}
 
         private void AbouDateLabel_Click(object sender, EventArgs e)

@@ -72,7 +72,7 @@ namespace NoteAppUI
 			// Особый случай с категорией.
 			if (CurrentNote.Category == NoteCategory.HealthAndSport)
 			{
-				CategoryComboBox.Text = "Health and Sport";
+				CategoryComboBox.Text = "Health And Sport";
 			}
 			else
 			{

@@ -251,7 +251,7 @@ namespace NoteAppUI
 				NoteTextBox.Text = note.Content;
 				if (note.Category == NoteCategory.HealthAndSport)
 				{
-					NoteCategoryLabel.Text = "Health and Sport";
+					NoteCategoryLabel.Text = "HealthAndSport";
 				}
 				else
 				{
@@ -322,6 +322,16 @@ namespace NoteAppUI
 				e.Cancel = true;
 			}
 		}
-	}
+
+        private void CreatedLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModifiedLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 
